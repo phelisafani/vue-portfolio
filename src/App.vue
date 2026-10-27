@@ -2,12 +2,13 @@
 import { ref, onMounted } from 'vue'
 import portrait from './assets/portrait.jpg'
 
-// ---- Ed
+// ---- Edit your content here ----
 const navItems = [
   { label: 'About', href: '#about' },
   { label: 'Skills', href: '#skills' },
   { label: 'Projects', href: '#projects' },
   { label: 'Education', href: '#education' },
+  { label: 'Certifications', href: '#certifications' },
   { label: 'Contact', href: '#contact' },
 ]
 
@@ -39,6 +40,16 @@ const projects = [
     url: 'https://phelisafani.github.io/HR_Project/',
     linkText: 'View live site →',
   },
+]
+
+const certifications = [
+  {
+    period: '2026',
+    name: 'YouthCode Software Development Programme',
+    issuer: 'Life Choices Academy (LCA) — Cape Town',
+    desc: 'Graduated from the full-stack web development programme.',
+  },
+  // Add more certificates here, one { ... } block each
 ]
 
 const resumeUrl = import.meta.env.BASE_URL + 'resume.pdf' // put your PDF in the public folder as resume.pdf
@@ -195,6 +206,22 @@ onMounted(() => {
               Studying full-stack web development, covering frontend interfaces, backend logic, databases, and the
               fundamentals of shipping a complete web application.
             </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="certifications" id="certifications">
+    <div class="wrap">
+      <div class="section-head reveal"><h2 class="section-title">Certifications.</h2></div>
+      <div class="timeline reveal">
+        <div v-for="c in certifications" :key="c.name" class="tl-item">
+          <div class="tl-period">{{ c.period }}</div>
+          <div>
+            <div class="tl-role">{{ c.name }}</div>
+            <div class="tl-org">{{ c.issuer }}</div>
+            <p class="tl-desc">{{ c.desc }}</p>
           </div>
         </div>
       </div>
