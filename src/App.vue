@@ -2,7 +2,7 @@
 import { ref, onMounted } from 'vue'
 import portrait from './assets/portrait.jpg'
 
-// ---- Edit your content here ----
+// ---- Ed
 const navItems = [
   { label: 'About', href: '#about' },
   { label: 'Skills', href: '#skills' },
