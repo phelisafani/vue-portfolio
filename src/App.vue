@@ -44,12 +44,23 @@ const projects = [
 
 const certifications = [
   {
-    period: '2026',
-    name: 'YouthCode Software Development Programme',
+    period: 'CISCO',
+    name: 'Introduction to Data Science',
+    issuer: 'Cisco Networking Academy',
+    desc: 'Certificate of completion covering the foundations of data science.',
+  },
+  {
+    period: 'CISCO',
+    name: 'Introduction to Cybersecurity',
+    issuer: 'Cisco Networking Academy',
+    desc: 'Certificate of completion covering the foundations of cybersecurity.',
+  },
+  {
+    period: 'LCA',
+    name: 'Software Development Certificate',
     issuer: 'Life Choices Academy (LCA) — Cape Town',
     desc: 'Graduated from the full-stack web development programme.',
   },
-  // Add more certificates here, one { ... } block each
 ]
 
 const resumeUrl = import.meta.env.BASE_URL + 'resume.pdf' // put your PDF in the public folder as resume.pdf
