@@ -36,7 +36,7 @@ const projects = [
   {
     title: 'Analytics Dashboard',
     desc: 'ModernTech Solutions — a company HR project with a clean, professional layout for presenting information.',
-    tags: ['HTML', 'Bootstrap', 'JavaScript'],
+    tags: ['Vue.js', 'JavaScript'],
     url: 'https://phelisafani.github.io/HR_Project/',
     linkText: 'View live site →',
   },
@@ -48,18 +48,21 @@ const certifications = [
     name: 'Introduction to Data Science',
     issuer: 'Cisco Networking Academy',
     desc: 'Certificate of completion covering the foundations of data science.',
+    url: '', // paste the link to this certificate here
   },
   {
     period: 'CISCO',
     name: 'Introduction to Cybersecurity',
     issuer: 'Cisco Networking Academy',
     desc: 'Certificate of completion covering the foundations of cybersecurity.',
+    url: '', // paste the link to this certificate here
   },
   {
     period: 'LCA',
     name: 'Software Development Certificate',
     issuer: 'Life Choices Academy (LCA) — Cape Town',
     desc: 'Graduated from the full-stack web development programme.',
+    url: '', // paste the link to this certificate here
   },
 ]
 
@@ -230,7 +233,7 @@ onMounted(() => {
         <div v-for="c in certifications" :key="c.name" class="tl-item">
           <div class="tl-period">{{ c.period }}</div>
           <div>
-            <div class="tl-role">{{ c.name }}</div>
+            <div class="tl-role"><a v-if="c.url" :href="c.url" target="_blank" rel="noopener">{{ c.name }} ↗</a><span v-else>{{ c.name }}</span></div>
             <div class="tl-org">{{ c.issuer }}</div>
             <p class="tl-desc">{{ c.desc }}</p>
           </div>
@@ -834,4 +837,7 @@ onMounted(() => {
     section{padding:90px 0;}
   }
 
+
+  .tl-role a{border-bottom:1px solid var(--brass); transition:color .2s ease;}
+  .tl-role a:hover{color:var(--brass-light);}
 </style>
