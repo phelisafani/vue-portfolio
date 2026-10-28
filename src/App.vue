@@ -514,7 +514,7 @@ onMounted(() => {
   .portrait-frame{
     position:relative;
     z-index:2;
-    width:360px;
+    width:100%;
     aspect-ratio:3/4;
     border-radius:4px;
     overflow:hidden;
