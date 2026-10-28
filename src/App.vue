@@ -48,21 +48,21 @@ const certifications = [
     name: 'Introduction to Data Science',
     issuer: 'Cisco Networking Academy',
     desc: 'Certificate of completion covering the foundations of data science.',
-    url: '', // paste the link to this certificate here
+    url: 'certificates/data-science.pdf',
   },
   {
     period: 'CISCO',
     name: 'Introduction to Cybersecurity',
     issuer: 'Cisco Networking Academy',
     desc: 'Certificate of completion covering the foundations of cybersecurity.',
-    url: '', // paste the link to this certificate here
+    url: 'certificates/cybersecurity.pdf',
   },
   {
     period: 'LCA',
     name: 'Software Development Certificate',
     issuer: 'Life Choices Academy (LCA) — Cape Town',
     desc: 'Graduated from the full-stack web development programme.',
-    url: '', // paste the link to this certificate here
+    url: '', // when you have the PDF: put it in public/certificates and use 'certificates/software-development.pdf'
   },
 ]
 
@@ -236,6 +236,7 @@ onMounted(() => {
             <div class="tl-role"><a v-if="c.url" :href="c.url" target="_blank" rel="noopener">{{ c.name }} ↗</a><span v-else>{{ c.name }}</span></div>
             <div class="tl-org">{{ c.issuer }}</div>
             <p class="tl-desc">{{ c.desc }}</p>
+            <a v-if="c.url" :href="c.url" class="project-link" style="display:inline-block; margin-top:14px;" target="_blank" rel="noopener">View certificate →</a>
           </div>
         </div>
       </div>
