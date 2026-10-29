@@ -24,6 +24,7 @@ const projects = [
     desc: 'A property listings page with a clean, card-based layout for browsing homes — built with responsive design in mind.',
     tags: ['HTML', 'Bootstrap', 'JavaScript'],
     url: 'https://phelisafani.github.io/property-mini-listings/',
+    repo: 'https://github.com/phelisafani/property-mini-listings',
     linkText: 'View live site →',
   },
   {
@@ -31,6 +32,7 @@ const projects = [
     desc: 'Pawtopia — a pet care booking site with a clean, easy-to-navigate layout for scheduling appointments.',
     tags: ['Vue.js', 'Python', 'SQL'],
     url: 'https://phelisafani.github.io/Pawtopia/index.html',
+    repo: 'https://github.com/phelisafani/Pawtopia',
     linkText: 'View live site →',
   },
   {
@@ -38,6 +40,7 @@ const projects = [
     desc: 'ModernTech Solutions — a company HR project with a clean, professional layout for presenting information.',
     tags: ['Vue.js', 'JavaScript'],
     url: 'https://phelisafani.github.io/HR_Project/',
+    repo: 'https://github.com/phelisafani/HR_Project',
     linkText: 'View live site →',
   },
 ]
@@ -200,7 +203,7 @@ onMounted(() => {
           </div>
           <div class="project-meta">
             <div class="project-tags"><span v-for="t in p.tags" :key="t" class="tag">{{ t }}</span></div>
-            <a :href="p.url" class="project-link" target="_blank" rel="noopener">{{ p.linkText }}</a>
+            <div style="display:flex; gap:22px; flex-wrap:wrap;"><a :href="p.url" class="project-link" target="_blank" rel="noopener">{{ p.linkText }}</a><a v-if="p.repo" :href="p.repo" class="project-link" target="_blank" rel="noopener">View code →</a></div>
           </div>
         </div>
       </div>
