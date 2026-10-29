@@ -62,7 +62,7 @@ const certifications = [
     name: 'Software Development Certificate',
     issuer: 'Life Choices Academy (LCA) — Cape Town',
     desc: 'Graduated from the full-stack web development programme.',
-    url: '', // when you have the PDF: put it in public/certificates and use 'certificates/software-development.pdf'
+    url: 'certificates/software-development.pdf',
   },
 ]
 
