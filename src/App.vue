@@ -14,7 +14,7 @@ const navItems = [
 
 const skillRows = [
   { label: 'Frontend', color: '#7dd3fc', tags: ['HTML', 'Bootstrap', 'JavaScript', 'Vue.js'] },
-  { label: 'Backend', color: '#b8935a', tags: ['Python'] },
+  { label: 'Backend', color: '#b8935a', tags: ['Python', 'Node.js', 'Express'] },
   { label: 'Database', color: '#a78bfa', tags: ['SQL', 'MySQL Workbench'] },
 ]
 
@@ -155,7 +155,7 @@ onMounted(() => {
           </p>
           <p>
             So far I'm most comfortable with HTML, Bootstrap, and JavaScript on the frontend, Vue.js for building
-            interfaces, Python on the backend, and SQL with MySQL Workbench for working with data — and I'm growing my
+            interfaces, Python, Node.js and Express on the backend, and SQL with MySQL Workbench for working with data — and I'm growing my
             range with every project.
           </p>
           <div class="about-stats">
